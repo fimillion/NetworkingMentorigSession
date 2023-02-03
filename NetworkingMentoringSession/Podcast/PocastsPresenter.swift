@@ -34,6 +34,7 @@ final class PodcastPresenter {
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: request) { data, response, error in
             guard let data = data else { return }
+        
             do {
                 let result = try JSONDecoder().decode(PodcastResult.self, from: data)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
@@ -42,6 +43,7 @@ final class PodcastPresenter {
                 })
             } catch {
                 DispatchQueue.main.async {
+                    print("PARSING_ERROR \(error)")
                     self.view?.display(isLoding: false)
                 }
             }
@@ -51,5 +53,3 @@ final class PodcastPresenter {
     func onSelect(_ genre: Genre) {
     }
 }
-
-

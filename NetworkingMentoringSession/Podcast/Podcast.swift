@@ -13,7 +13,7 @@ struct PodcastResult: Decodable {
 }
 // MARK: - Podcast
 struct Podcast: Decodable {
-    let id: Int
+    let id: String
     let image: String
     let title: String
     let episodes: [Episode]?

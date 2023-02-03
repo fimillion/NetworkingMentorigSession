@@ -43,10 +43,12 @@ final class PodcastViewController: UITableViewController {
 }
 
 extension PodcastViewController: PodcastView {
+    
     func display(_ podcasts: [Podcast]) {
         self.podcasts = podcasts
         tableView.reloadData()
     }
+    
     func display(isLoding: Bool) {
         if isLoding {
             tableView.refreshControl?.beginRefreshing()

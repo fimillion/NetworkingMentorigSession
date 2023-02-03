@@ -14,8 +14,8 @@ protocol EpisodeView: AnyObject {
 
 final class EpisodePresenter {
     weak var view: EpisodeView?
-    var podcastId: Int
-    init(podcastId: Int) {
+    var podcastId: String
+    init(podcastId: String) {
         self.podcastId = podcastId
     }
     func onRefresh() {
