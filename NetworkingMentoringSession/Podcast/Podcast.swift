@@ -11,11 +11,9 @@ import Foundation
 struct PodcastResult: Decodable {
     let podcasts: [Podcast]
 }
-
-
 // MARK: - Podcast
 struct Podcast: Decodable {
-    let id: String
+    let id: Int
     let image: String
     let title: String
     let episodes: [Episode]?

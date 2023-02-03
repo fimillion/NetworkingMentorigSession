@@ -15,14 +15,9 @@ class CustomTableViewCell: UITableViewCell {
     }
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var descriptionLable: UILabel!
-    
     @IBOutlet weak var artImage: UIImageView!
-    
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

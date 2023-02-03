@@ -13,14 +13,14 @@
 		486374C62969CC270023D59C /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486374C52969CC270023D59C /* Episode.swift */; };
 		486374CF2969D16D0023D59C /* EpisodeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486374CD2969D16D0023D59C /* EpisodeTableViewController.swift */; };
 		486374D02969D16D0023D59C /* EpisodeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486374CE2969D16D0023D59C /* EpisodeTableViewController.xib */; };
-		486374D62969F15F0023D59C /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486374D52969F15F0023D59C /* EpisodeCell.swift */; };
-		4895D43C298AB3CB00A0071A /* PodcastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4895D43B298AB3CB00A0071A /* PodcastViewController.xib */; };
 		48AA93FA298174D4007E0BA3 /* GenresPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AA93F9298174D4007E0BA3 /* GenresPresenter.swift */; };
 		48AA93FC29817538007E0BA3 /* PocastsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AA93FB29817538007E0BA3 /* PocastsPresenter.swift */; };
 		48AA93FE2981756D007E0BA3 /* EpisodesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AA93FD2981756D007E0BA3 /* EpisodesPresenter.swift */; };
 		48B1C274296350DF0025639E /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1C273296350DF0025639E /* Podcast.swift */; };
 		48B1C2782963524C0025639E /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1C2772963524C0025639E /* Genre.swift */; };
 		48BAA726298A826B00DA0A80 /* PodcastComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BAA725298A826B00DA0A80 /* PodcastComposer.swift */; };
+		48C7F306298BBA1400C652D8 /* PodcastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48C7F305298BBA1400C652D8 /* PodcastViewController.xib */; };
+		48D0C0C1298D0F580098BBDB /* EpisodeComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0C0C0298D0F580098BBDB /* EpisodeComposer.swift */; };
 		48E72748296592C700DFF129 /* PodcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E72746296592C700DFF129 /* PodcastViewController.swift */; };
 		8D1A4B4A2955FB7F00825E60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A4B492955FB7F00825E60 /* AppDelegate.swift */; };
 		8D1A4B4C2955FB7F00825E60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1A4B4B2955FB7F00825E60 /* SceneDelegate.swift */; };
@@ -38,14 +38,14 @@
 		486374C52969CC270023D59C /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		486374CD2969D16D0023D59C /* EpisodeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewController.swift; sourceTree = "<group>"; };
 		486374CE2969D16D0023D59C /* EpisodeTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeTableViewController.xib; sourceTree = "<group>"; };
-		486374D52969F15F0023D59C /* EpisodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
-		4895D43B298AB3CB00A0071A /* PodcastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PodcastViewController.xib; path = Model/PodcastViewController.xib; sourceTree = "<group>"; };
 		48AA93F9298174D4007E0BA3 /* GenresPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresPresenter.swift; sourceTree = "<group>"; };
 		48AA93FB29817538007E0BA3 /* PocastsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocastsPresenter.swift; sourceTree = "<group>"; };
 		48AA93FD2981756D007E0BA3 /* EpisodesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesPresenter.swift; sourceTree = "<group>"; };
 		48B1C273296350DF0025639E /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		48B1C2772963524C0025639E /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		48BAA725298A826B00DA0A80 /* PodcastComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastComposer.swift; sourceTree = "<group>"; };
+		48C7F305298BBA1400C652D8 /* PodcastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PodcastViewController.xib; sourceTree = "<group>"; };
+		48D0C0C0298D0F580098BBDB /* EpisodeComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeComposer.swift; sourceTree = "<group>"; };
 		48E72746296592C700DFF129 /* PodcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastViewController.swift; sourceTree = "<group>"; };
 		8D1A4B462955FB7F00825E60 /* NetworkingMentoringSession.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingMentoringSession.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1A4B492955FB7F00825E60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +83,6 @@
 			children = (
 				48B1C2772963524C0025639E /* Genre.swift */,
 				8D1A4B4D2955FB7F00825E60 /* GenresViewController .swift */,
-				48BAA725298A826B00DA0A80 /* PodcastComposer.swift */,
 				48AA93F9298174D4007E0BA3 /* GenresPresenter.swift */,
 			);
 			path = Genres;
@@ -93,9 +92,10 @@
 			isa = PBXGroup;
 			children = (
 				48B1C273296350DF0025639E /* Podcast.swift */,
-				4895D43B298AB3CB00A0071A /* PodcastViewController.xib */,
+				48C7F305298BBA1400C652D8 /* PodcastViewController.xib */,
 				48E72746296592C700DFF129 /* PodcastViewController.swift */,
 				48AA93FB29817538007E0BA3 /* PocastsPresenter.swift */,
+				48BAA725298A826B00DA0A80 /* PodcastComposer.swift */,
 			);
 			path = Podcast;
 			sourceTree = "<group>";
@@ -103,11 +103,11 @@
 		4891C172298940520072C660 /* Episode */ = {
 			isa = PBXGroup;
 			children = (
-				486374D52969F15F0023D59C /* EpisodeCell.swift */,
 				486374C52969CC270023D59C /* Episode.swift */,
 				486374CE2969D16D0023D59C /* EpisodeTableViewController.xib */,
 				486374CD2969D16D0023D59C /* EpisodeTableViewController.swift */,
 				48AA93FD2981756D007E0BA3 /* EpisodesPresenter.swift */,
+				48D0C0C0298D0F580098BBDB /* EpisodeComposer.swift */,
 			);
 			path = Episode;
 			sourceTree = "<group>";
@@ -173,6 +173,7 @@
 				8D1A4B422955FB7F00825E60 /* Sources */,
 				8D1A4B432955FB7F00825E60 /* Frameworks */,
 				8D1A4B442955FB7F00825E60 /* Resources */,
+				483C70E7298BCC4800FA84A4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -226,12 +227,32 @@
 				480D65C8296EEB6A003106FD /* CustomCell.xib in Resources */,
 				8D1A4B5E2955FC0000825E60 /* README.md in Resources */,
 				8D1A4B512955FB7F00825E60 /* Main.storyboard in Resources */,
-				4895D43C298AB3CB00A0071A /* PodcastViewController.xib in Resources */,
+				48C7F306298BBA1400C652D8 /* PodcastViewController.xib in Resources */,
 				486374D02969D16D0023D59C /* EpisodeTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		483C70E7298BCC4800FA84A4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D1A4B422955FB7F00825E60 /* Sources */ = {
@@ -245,13 +266,13 @@
 				486374CF2969D16D0023D59C /* EpisodeTableViewController.swift in Sources */,
 				48BAA726298A826B00DA0A80 /* PodcastComposer.swift in Sources */,
 				8D1A4B4E2955FB7F00825E60 /* GenresViewController .swift in Sources */,
-				486374D62969F15F0023D59C /* EpisodeCell.swift in Sources */,
 				8D1A4B4A2955FB7F00825E60 /* AppDelegate.swift in Sources */,
 				48B1C274296350DF0025639E /* Podcast.swift in Sources */,
 				485B05B02976C63B00E2D55C /* UImageViewExtension.swift in Sources */,
 				8D1A4B4C2955FB7F00825E60 /* SceneDelegate.swift in Sources */,
 				480D65CA296EF6C4003106FD /* CustomTableViewCell.swift in Sources */,
 				486374C62969CC270023D59C /* Episode.swift in Sources */,
+				48D0C0C1298D0F580098BBDB /* EpisodeComposer.swift in Sources */,
 				48B1C2782963524C0025639E /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

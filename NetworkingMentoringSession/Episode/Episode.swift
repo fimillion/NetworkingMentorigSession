@@ -13,12 +13,11 @@ struct EpisodesResult: Decodable {
 
 // MARK: - Episode
 struct Episode: Decodable {
-    let id: String
+    let id: Int
     let image: String
     let title: String
     let description: String
-    
-    init(id: String, image: String, title: String, description: String) {
+    init(id: Int, image: String, title: String, description: String) {
         self.id = id
         self.image = image
         self.title = title
