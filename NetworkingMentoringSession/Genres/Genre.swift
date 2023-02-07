@@ -7,10 +7,12 @@
 
 import Foundation
 
+// MARK: - GenresResult
 struct GenresResult: Decodable {
     let genres: [Genre]
 }
 
+// MARK: - Genre
 struct Genre: Decodable {
     let id: Int
     let name: String

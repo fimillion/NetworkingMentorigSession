@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - EpisodesResult
 struct EpisodesResult: Decodable {
     let episodes: [Episode]
 }

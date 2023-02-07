@@ -18,6 +18,7 @@ final class EpisodePresenter {
     init(podcastId: String) {
         self.podcastId = podcastId
     }
+    
     func getEpisods() {
         // URL
         let url = URL(string: "https://listen-api-test.listennotes.com/api/v2/podcasts/id=\(podcastId)")
@@ -29,7 +30,7 @@ final class EpisodePresenter {
         request.httpMethod = "GET"
         // Session
         let session = URLSession(configuration: .default)
-        // dataTask
+        // DataTask
         let task = session.dataTask(with: request) { data, _, _ in
             guard let data = data else { return }
             do {

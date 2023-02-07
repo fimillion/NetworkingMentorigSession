@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class EpisodeTableViewController: UITableViewController {
+final class EpisodeViewController: UITableViewController {
     var presenter: EpisodePresenter!
     var episodes: [Episode] = []
     
@@ -45,7 +45,7 @@ final class EpisodeTableViewController: UITableViewController {
     }
 }
 
-extension EpisodeTableViewController: EpisodeView {
+extension EpisodeViewController: EpisodeView {
     
     func display(_ episode: [Episode]) {
         episodes = episode
