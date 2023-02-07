@@ -15,10 +15,10 @@ protocol PodcastView: AnyObject {
 final class PodcastPresenter {
     weak  var view: PodcastView?
     var genreId: Int
-    
     init(genreId: Int) {
         self.genreId = genreId
     }
+    
     func getPodcasts() {
         view?.display(isLoding: true)
         var components = URLComponents()
@@ -29,12 +29,9 @@ final class PodcastPresenter {
             URLQueryItem(name: "genre_id", value: String(genreId))
         ]
         let request = URLRequest(url: components.url!)
-        print(components.url!)
-        // Create the Send
         let session = URLSession(configuration: .default)
-        let task = session.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: request) { data, _, _ in
             guard let data = data else { return }
-        
             do {
                 let result = try JSONDecoder().decode(PodcastResult.self, from: data)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
@@ -49,7 +46,5 @@ final class PodcastPresenter {
             }
         }
         task.resume()
-    }
-    func onSelect(_ genre: Genre) {
     }
 }

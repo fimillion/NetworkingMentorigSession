@@ -10,6 +10,7 @@ import UIKit
 final class EpisodeTableViewController: UITableViewController {
     var presenter: EpisodePresenter!
     var episodes: [Episode] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Episode"
@@ -21,25 +22,41 @@ final class EpisodeTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 500
         onRefresh()
     }
+    
     @objc
     func onRefresh() {
-        presenter.onRefresh()
+        presenter.getEpisods()
     }
-    // MARK: - Table view data source
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return episodes.count
     }
+    
     // MARK: - The visual representation of a single row in a table view.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // swiftlint:disable force_cast
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomTableViewCell
         let episode = episodes[indexPath.row]
-        cell.titleLable.text = episode.title
-        cell.descriptionLable.text = episode.description
-        cell.artImage.loadFrom(URLAddress: episode.image)
+        cell.setup(with: episode)
         return cell
+    }
+}
+
+extension EpisodeTableViewController: EpisodeView {
+    
+    func display(_ episode: [Episode]) {
+        episodes = episode
+        tableView.reloadData()
+    }
+    
+    func display(isLoding: Bool) {
+        if isLoding {
+            tableView.refreshControl?.beginRefreshing()
+        } else {
+            tableView.refreshControl?.endRefreshing()
+        }
     }
 }

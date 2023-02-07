@@ -22,11 +22,12 @@ final class GenresPresenter {
         guard url != nil else {
             return
         }
+        
         // URL Request
         var request = URLRequest(url: url!)
         request.httpMethod = "GET"
         let session = URLSession(configuration: .default)
-        let task = session.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: request) { data, _, _ in
             guard let data = data else { return }
             do {
                 let result = try JSONDecoder().decode(GenresResult.self, from: data)
@@ -43,4 +44,3 @@ final class GenresPresenter {
         task.resume()
     }
 }
-

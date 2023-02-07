@@ -18,7 +18,7 @@ final class EpisodePresenter {
     init(podcastId: String) {
         self.podcastId = podcastId
     }
-    func onRefresh() {
+    func getEpisods() {
         // URL
         let url = URL(string: "https://listen-api-test.listennotes.com/api/v2/podcasts/id=\(podcastId)")
         guard url != nil else {
@@ -30,7 +30,7 @@ final class EpisodePresenter {
         // Session
         let session = URLSession(configuration: .default)
         // dataTask
-        let task = session.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: request) { data, _, _ in
             guard let data = data else { return }
             do {
                 let result = try JSONDecoder().decode(EpisodesResult.self, from: data)
@@ -45,19 +45,5 @@ final class EpisodePresenter {
             }
         }
         task.resume()
-    }
-}
-
-extension EpisodeTableViewController: EpisodeView {
-    func display(_ episode: [Episode]) {
-        episodes = episode
-        tableView.reloadData()
-    }
-    func display(isLoding: Bool) {
-        if isLoding {
-            tableView.refreshControl?.beginRefreshing()
-        } else {
-            tableView.refreshControl?.endRefreshing()
-        }
     }
 }

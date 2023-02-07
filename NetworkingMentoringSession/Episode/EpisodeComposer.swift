@@ -9,7 +9,7 @@ import UIKit
 
 class EpisodeComposer {
   static func build (podcastId: String) -> UIViewController {
-    let presenter = EpisodePresenter.init(podcastId: podcastId)
+    let presenter = EpisodePresenter(podcastId: podcastId)
     let controller = EpisodeTableViewController()
     controller.presenter = presenter
     presenter.view = controller
