@@ -15,6 +15,7 @@ protocol EpisodeView: AnyObject {
 final class EpisodePresenter {
     weak var view: EpisodeView?
     var podcastId: String
+    
     init(podcastId: String) {
         self.podcastId = podcastId
     }

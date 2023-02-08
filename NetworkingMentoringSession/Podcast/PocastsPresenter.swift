@@ -15,6 +15,7 @@ protocol PodcastView: AnyObject {
 final class PodcastPresenter {
     weak  var view: PodcastView?
     var genreId: Int
+    
     init(genreId: Int) {
         self.genreId = genreId
     }

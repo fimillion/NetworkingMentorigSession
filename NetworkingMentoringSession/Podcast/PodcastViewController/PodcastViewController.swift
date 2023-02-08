@@ -1,7 +1,6 @@
 import UIKit
 
 final class PodcastViewController: UITableViewController {
-    
     var presenter: PodcastPresenter!
     var podcasts: [Podcast] = []
     
@@ -30,7 +29,6 @@ final class PodcastViewController: UITableViewController {
         return podcasts.count
     }
     
-    // MARK: - The visual representation of a single row in a table view.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell") as! ImageTableViewCell
         
@@ -39,7 +37,6 @@ final class PodcastViewController: UITableViewController {
         return cell
     }
     
-    // MARK: - Navigation to Episode
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let podcast = podcasts[indexPath.row]
         let episodeVC = EpisodeComposer.build(podcastId: podcast.id)

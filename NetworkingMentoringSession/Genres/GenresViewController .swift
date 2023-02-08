@@ -27,7 +27,6 @@ final class GenresViewController: UITableViewController {
         return genres.count
     }
     
-    // MARK: - The visual representation of a single row in a table view.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell")!
         let genre = genres[indexPath.row]
@@ -35,7 +34,6 @@ final class GenresViewController: UITableViewController {
         return cell
     }
     
-    // MARK: - Navigation to Podcast
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let genre = genres[indexPath.row]
         let podcastVC = PodcastComposer.build(genreId: genre.id)
