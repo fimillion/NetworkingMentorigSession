@@ -14,8 +14,8 @@ final class EpisodeViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Episode"
-        let customCellNib = UINib(nibName: "CustomCell", bundle: nil)
-        tableView.register(customCellNib, forCellReuseIdentifier: "CustomCell")
+        let customCellNib = UINib(nibName: "ImageTableViewCell", bundle: nil)
+        tableView.register(customCellNib, forCellReuseIdentifier: "ImageTableViewCell")
         tableView.refreshControl = UIRefreshControl()
         tableView.refreshControl?.addTarget(self, action: #selector(onRefresh), for: .valueChanged)
         tableView.rowHeight = UITableView.automaticDimension
@@ -38,7 +38,7 @@ final class EpisodeViewController: UITableViewController {
     
     // MARK: - The visual representation of a single row in a table view.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell") as! ImageTableViewCell
         let episode = episodes[indexPath.row]
         cell.setup(with: episode)
         return cell

@@ -9,8 +9,8 @@ final class PodcastViewController: UITableViewController {
         super.viewDidLoad()
         presenter.view = self
         self.navigationItem.title = "Podcast"
-        let customCellNib = UINib(nibName: "CustomCell", bundle: nil)
-        tableView.register(customCellNib, forCellReuseIdentifier: "CustomCell")
+        let customCellNib = UINib(nibName: "ImageTableViewCell", bundle: nil)
+        tableView.register(customCellNib, forCellReuseIdentifier: "ImageTableViewCell")
         tableView.refreshControl = UIRefreshControl()
         tableView.refreshControl?.addTarget(self, action: #selector(onRefresh), for: .valueChanged)
         tableView.rowHeight = UITableView.automaticDimension
@@ -32,7 +32,8 @@ final class PodcastViewController: UITableViewController {
     
     // MARK: - The visual representation of a single row in a table view.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell") as! ImageTableViewCell
+        
         let podcast = podcasts[indexPath.row]
         cell.setup(with: podcast)
         return cell

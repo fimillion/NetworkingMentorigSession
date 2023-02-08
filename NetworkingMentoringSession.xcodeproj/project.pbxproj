@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		480D65C8296EEB6A003106FD /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 480D65C7296EEB6A003106FD /* CustomCell.xib */; };
+		480D65C8296EEB6A003106FD /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 480D65C7296EEB6A003106FD /* ImageTableViewCell.xib */; };
 		480D65CA296EF6C4003106FD /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480D65C9296EF6C4003106FD /* ImageTableViewCell.swift */; };
 		485B05B02976C63B00E2D55C /* UImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485B05AF2976C63B00E2D55C /* UImageView+Extensions.swift */; };
 		486374C62969CC270023D59C /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486374C52969CC270023D59C /* Episode.swift */; };
@@ -34,7 +34,7 @@
 
 /* Begin PBXFileReference section */
 		0E3E4CB37440938F2D6C4612 /* Pods_NetworkingMentoringSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkingMentoringSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		480D65C7296EEB6A003106FD /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		480D65C7296EEB6A003106FD /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 		480D65C9296EF6C4003106FD /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		485B05AF2976C63B00E2D55C /* UImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UImageView+Extensions.swift"; sourceTree = "<group>"; };
 		486374C52969CC270023D59C /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		480D65C6296EDBB1003106FD /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				480D65C7296EEB6A003106FD /* CustomCell.xib */,
+				480D65C7296EEB6A003106FD /* ImageTableViewCell.xib */,
 				480D65C9296EF6C4003106FD /* ImageTableViewCell.swift */,
 			);
 			path = Cells;
@@ -265,7 +265,7 @@
 			files = (
 				8D1A4B562955FB8000825E60 /* LaunchScreen.storyboard in Resources */,
 				8D1A4B532955FB8000825E60 /* Assets.xcassets in Resources */,
-				480D65C8296EEB6A003106FD /* CustomCell.xib in Resources */,
+				480D65C8296EEB6A003106FD /* ImageTableViewCell.xib in Resources */,
 				8D1A4B5E2955FC0000825E60 /* README.md in Resources */,
 				8D1A4B512955FB7F00825E60 /* Main.storyboard in Resources */,
 				48AA2564298D4D8200E597F1 /* PodcastViewController.xib in Resources */,
