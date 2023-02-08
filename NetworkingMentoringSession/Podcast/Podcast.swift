@@ -1,18 +1,9 @@
-//
-//  Podcast.swift
-//  NetworkingMentoringSession
-//
-//  Created by Yefim on 02.01.2023.
-//
-
 import Foundation
 
-// MARK: - PodcastResult
 struct PodcastResult: Decodable {
     let podcasts: [Podcast]
 }
 
-// MARK: - Podcast
 struct Podcast: Decodable {
     let id: String
     let image: String

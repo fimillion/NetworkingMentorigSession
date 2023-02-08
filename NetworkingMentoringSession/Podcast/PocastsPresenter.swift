@@ -1,10 +1,3 @@
-//
-//  PocastPresenter.swift
-//  NetworkingMentoringSession
-//
-//  Created by Yefim on 25.01.2023.
-//
-
 import Foundation
 
 protocol PodcastView: AnyObject {
@@ -15,6 +8,7 @@ protocol PodcastView: AnyObject {
 final class PodcastPresenter {
     weak  var view: PodcastView?
     var genreId: Int
+    
     init(genreId: Int) {
         self.genreId = genreId
     }

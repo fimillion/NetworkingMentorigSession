@@ -1,10 +1,3 @@
-//
-//  EpisodeTableViewController.swift
-//  NetworkingMentoringSession
-//
-//  Created by Yefim on 07.01.2023.
-// oi
-
 import UIKit
 
 final class EpisodeViewController: UITableViewController {
@@ -18,8 +11,6 @@ final class EpisodeViewController: UITableViewController {
         tableView.register(customCellNib, forCellReuseIdentifier: "ImageTableViewCell")
         tableView.refreshControl = UIRefreshControl()
         tableView.refreshControl?.addTarget(self, action: #selector(onRefresh), for: .valueChanged)
-//        tableView.rowHeight = UITableView.automaticDimension
-//        tableView.estimatedRowHeight = 500
         onRefresh()
     }
     
@@ -36,7 +27,6 @@ final class EpisodeViewController: UITableViewController {
         return episodes.count
     }
     
-    // MARK: - The visual representation of a single row in a table view.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell") as! ImageTableViewCell
         let episode = episodes[indexPath.row]
@@ -46,6 +36,7 @@ final class EpisodeViewController: UITableViewController {
 }
 
 extension EpisodeViewController: EpisodeView {
+    
     func display(_ episode: [Episode]) {
         episodes = episode
         tableView.reloadData()

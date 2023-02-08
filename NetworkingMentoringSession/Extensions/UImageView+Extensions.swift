@@ -1,13 +1,7 @@
-//
-//  UImageViewExtension.swift
-//  NetworkingMentoringSession
-//
-//  Created by Yefim on 17.01.2023.
-//
-
 import UIKit
 
 extension UIImageView {
+    
     func loadFrom(URLAddress: String) {
         guard let url = URL(string: URLAddress) else {
             return
