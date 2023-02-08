@@ -18,8 +18,8 @@ final class EpisodeViewController: UITableViewController {
         tableView.register(customCellNib, forCellReuseIdentifier: "ImageTableViewCell")
         tableView.refreshControl = UIRefreshControl()
         tableView.refreshControl?.addTarget(self, action: #selector(onRefresh), for: .valueChanged)
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 500
+//        tableView.rowHeight = UITableView.automaticDimension
+//        tableView.estimatedRowHeight = 500
         onRefresh()
     }
     
@@ -46,7 +46,6 @@ final class EpisodeViewController: UITableViewController {
 }
 
 extension EpisodeViewController: EpisodeView {
-    
     func display(_ episode: [Episode]) {
         episodes = episode
         tableView.reloadData()
