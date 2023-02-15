@@ -1,7 +1,6 @@
 import UIKit
 
 final class GenreComposer {
-    
     static func build () -> UIViewController {
         let presenter = GenresPresenter()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
