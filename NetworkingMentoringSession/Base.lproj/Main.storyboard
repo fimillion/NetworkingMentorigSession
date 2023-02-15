@@ -27,6 +27,42 @@
             </objects>
             <point key="canvasLocation" x="551.90839694656484" y="-46.478873239436624"/>
         </scene>
+        <!--Podcast View Controller-->
+        <scene sceneID="XBD-KE-Fsz">
+            <objects>
+                <tableViewController storyboardIdentifier="PodcastViewController" id="XD2-ji-6nM" customClass="PodcastViewController" customModule="NetworkingMentoringSession" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="cBX-Sc-Y4Q">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="XD2-ji-6nM" id="fsE-Ol-2Gi"/>
+                            <outlet property="delegate" destination="XD2-ji-6nM" id="55l-l3-dqA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wDD-Um-LYz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1285" y="-39"/>
+        </scene>
+        <!--Episode View Controller-->
+        <scene sceneID="AKF-JV-VVC">
+            <objects>
+                <tableViewController storyboardIdentifier="EpisodeViewController" id="OE0-Os-dYf" customClass="EpisodeViewController" customModule="NetworkingMentoringSession" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="SlR-Yh-nZf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="OE0-Os-dYf" id="b2f-Fz-zH3"/>
+                            <outlet property="delegate" destination="OE0-Os-dYf" id="sYC-IW-j48"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4gV-Bt-l4I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2001" y="-39"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

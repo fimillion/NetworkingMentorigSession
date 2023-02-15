@@ -1,7 +1,7 @@
 import UIKit
 
 final class GenresViewController: UITableViewController {
-    var presenter = GenresPresenter()
+    var presenter: GenresPresenter!
     var genres: [Genre] = []
     
     override func viewDidLoad() {
