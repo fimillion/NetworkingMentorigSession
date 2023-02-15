@@ -18,6 +18,7 @@
 		48AA93FA298174D4007E0BA3 /* GenresPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AA93F9298174D4007E0BA3 /* GenresPresenter.swift */; };
 		48AA93FC29817538007E0BA3 /* PocastsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AA93FB29817538007E0BA3 /* PocastsPresenter.swift */; };
 		48AA93FE2981756D007E0BA3 /* EpisodesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AA93FD2981756D007E0BA3 /* EpisodesPresenter.swift */; };
+		48B0A272299C1899009551E5 /* GenreComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B0A271299C1899009551E5 /* GenreComposer.swift */; };
 		48B1C274296350DF0025639E /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1C273296350DF0025639E /* Podcast.swift */; };
 		48B1C2782963524C0025639E /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B1C2772963524C0025639E /* Genre.swift */; };
 		48BAA726298A826B00DA0A80 /* PodcastComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BAA725298A826B00DA0A80 /* PodcastComposer.swift */; };
@@ -44,6 +45,7 @@
 		48AA93F9298174D4007E0BA3 /* GenresPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresPresenter.swift; sourceTree = "<group>"; };
 		48AA93FB29817538007E0BA3 /* PocastsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocastsPresenter.swift; sourceTree = "<group>"; };
 		48AA93FD2981756D007E0BA3 /* EpisodesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesPresenter.swift; sourceTree = "<group>"; };
+		48B0A271299C1899009551E5 /* GenreComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreComposer.swift; sourceTree = "<group>"; };
 		48B1C273296350DF0025639E /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		48B1C2772963524C0025639E /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		48BAA725298A826B00DA0A80 /* PodcastComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastComposer.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				48B1C2772963524C0025639E /* Genre.swift */,
 				8D1A4B4D2955FB7F00825E60 /* GenresViewController .swift */,
 				48AA93F9298174D4007E0BA3 /* GenresPresenter.swift */,
+				48B0A271299C1899009551E5 /* GenreComposer.swift */,
 			);
 			path = Genres;
 			sourceTree = "<group>";
@@ -149,15 +152,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		48E9ABC42977F323005D4E50 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				8D1A4B492955FB7F00825E60 /* AppDelegate.swift */,
-				8D1A4B4B2955FB7F00825E60 /* SceneDelegate.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
 		8D1A4B3D2955FB7F00825E60 = {
 			isa = PBXGroup;
 			children = (
@@ -179,7 +173,8 @@
 		8D1A4B482955FB7F00825E60 /* NetworkingMentoringSession */ = {
 			isa = PBXGroup;
 			children = (
-				48E9ABC42977F323005D4E50 /* App */,
+				8D1A4B492955FB7F00825E60 /* AppDelegate.swift */,
+				8D1A4B4B2955FB7F00825E60 /* SceneDelegate.swift */,
 				4891C17C298941A30072C660 /* Extensions */,
 				480D65C6296EDBB1003106FD /* Cells */,
 				4891C170298940200072C660 /* Genres */,
@@ -214,7 +209,7 @@
 				8D1A4B422955FB7F00825E60 /* Sources */,
 				8D1A4B432955FB7F00825E60 /* Frameworks */,
 				8D1A4B442955FB7F00825E60 /* Resources */,
-				4854DA83299247C9001E3AC8 /* ShellScript */,
+				48A4B019299CD2BD001DD918 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -276,7 +271,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4854DA83299247C9001E3AC8 /* ShellScript */ = {
+		48A4B019299CD2BD001DD918 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -329,6 +324,7 @@
 				486374CF2969D16D0023D59C /* EpisodeViewController.swift in Sources */,
 				48BAA726298A826B00DA0A80 /* PodcastComposer.swift in Sources */,
 				8D1A4B4E2955FB7F00825E60 /* GenresViewController .swift in Sources */,
+				48B0A272299C1899009551E5 /* GenreComposer.swift in Sources */,
 				8D1A4B4A2955FB7F00825E60 /* AppDelegate.swift in Sources */,
 				48B1C274296350DF0025639E /* Podcast.swift in Sources */,
 				485B05B02976C63B00E2D55C /* UImageView+Extensions.swift in Sources */,
@@ -412,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -466,7 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -492,7 +488,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -525,7 +521,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
