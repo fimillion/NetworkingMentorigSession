@@ -11,8 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        let genreNavigation = UINavigationController(rootViewController: GenreComposer.build())
-        window.rootViewController = genreNavigation
+        window.rootViewController = makeColorsFlow()
         self.window = window
         window.makeKeyAndVisible()
     }
@@ -27,4 +26,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func sceneDidEnterBackground(_ scene: UIScene) {}
     
+    private func makeGenresFlow() -> UIViewController {
+        return UINavigationController(rootViewController: GenreComposer.build())
+    }
+    
+    private func makeColorsFlow() -> UIViewController {
+        return UINavigationController(rootViewController: WelcomeColorsViewController())
+    }
 }

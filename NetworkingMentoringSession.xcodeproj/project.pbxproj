@@ -29,6 +29,12 @@
 		8D1A4B532955FB8000825E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D1A4B522955FB8000825E60 /* Assets.xcassets */; };
 		8D1A4B562955FB8000825E60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D1A4B542955FB8000825E60 /* LaunchScreen.storyboard */; };
 		8D1A4B5E2955FC0000825E60 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8D1A4B5D2955FC0000825E60 /* README.md */; };
+		8D334D6129CDCD0700F1D540 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D334D6029CDCD0700F1D540 /* ColorPickerViewController.swift */; };
+		8D334D6329CDCD2200F1D540 /* ColorSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D334D6229CDCD2200F1D540 /* ColorSettingsViewController.swift */; };
+		8D334D6629CDCD6900F1D540 /* ColorPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D334D6529CDCD6900F1D540 /* ColorPickerViewController.xib */; };
+		8D334D6929CDCDCC00F1D540 /* ColorSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D334D6829CDCDCC00F1D540 /* ColorSettingsViewController.xib */; };
+		8D334D6F29CDD18100F1D540 /* WelcomeColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D334D6B29CDD0C800F1D540 /* WelcomeColorsViewController.swift */; };
+		8D334D7029CDD18100F1D540 /* WelcomeColorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D334D6C29CDD0C900F1D540 /* WelcomeColorsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +62,12 @@
 		8D1A4B552955FB8000825E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D1A4B572955FB8000825E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1A4B5D2955FC0000825E60 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		8D334D6029CDCD0700F1D540 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		8D334D6229CDCD2200F1D540 /* ColorSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSettingsViewController.swift; sourceTree = "<group>"; };
+		8D334D6529CDCD6900F1D540 /* ColorPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorPickerViewController.xib; sourceTree = "<group>"; };
+		8D334D6829CDCDCC00F1D540 /* ColorSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorSettingsViewController.xib; sourceTree = "<group>"; };
+		8D334D6B29CDD0C800F1D540 /* WelcomeColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeColorsViewController.swift; sourceTree = "<group>"; };
+		8D334D6C29CDD0C900F1D540 /* WelcomeColorsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeColorsViewController.xib; sourceTree = "<group>"; };
 		B4105DFA8AE42A35AACD173C /* Pods-NetworkingMentoringSession.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingMentoringSession.debug.xcconfig"; path = "Target Support Files/Pods-NetworkingMentoringSession/Pods-NetworkingMentoringSession.debug.xcconfig"; sourceTree = "<group>"; };
 		E768FAE0BB94414A07046B81 /* Pods-NetworkingMentoringSession.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingMentoringSession.release.xcconfig"; path = "Target Support Files/Pods-NetworkingMentoringSession/Pods-NetworkingMentoringSession.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +170,7 @@
 				4891C170298940200072C660 /* Genres */,
 				4891C171298940470072C660 /* Podcast */,
 				4891C172298940520072C660 /* Episode */,
+				8D334D5F29CDCCD100F1D540 /* ColorPicker */,
 				8D1A4B4F2955FB7F00825E60 /* Main.storyboard */,
 				8D1A4B5D2955FC0000825E60 /* README.md */,
 				8D1A4B522955FB8000825E60 /* Assets.xcassets */,
@@ -165,6 +178,43 @@
 				8D1A4B572955FB8000825E60 /* Info.plist */,
 			);
 			path = NetworkingMentoringSession;
+			sourceTree = "<group>";
+		};
+		8D334D5F29CDCCD100F1D540 /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				8D334D6A29CDD0C800F1D540 /* WelcomeColorsViewController */,
+				8D334D6729CDCD8200F1D540 /* ColorSettingsViewController */,
+				8D334D6429CDCD5A00F1D540 /* ColorPickerViewController */,
+			);
+			path = ColorPicker;
+			sourceTree = "<group>";
+		};
+		8D334D6429CDCD5A00F1D540 /* ColorPickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8D334D6029CDCD0700F1D540 /* ColorPickerViewController.swift */,
+				8D334D6529CDCD6900F1D540 /* ColorPickerViewController.xib */,
+			);
+			path = ColorPickerViewController;
+			sourceTree = "<group>";
+		};
+		8D334D6729CDCD8200F1D540 /* ColorSettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8D334D6229CDCD2200F1D540 /* ColorSettingsViewController.swift */,
+				8D334D6829CDCDCC00F1D540 /* ColorSettingsViewController.xib */,
+			);
+			path = ColorSettingsViewController;
+			sourceTree = "<group>";
+		};
+		8D334D6A29CDD0C800F1D540 /* WelcomeColorsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8D334D6B29CDD0C800F1D540 /* WelcomeColorsViewController.swift */,
+				8D334D6C29CDD0C900F1D540 /* WelcomeColorsViewController.xib */,
+			);
+			path = WelcomeColorsViewController;
 			sourceTree = "<group>";
 		};
 		C3822B10ABC0F06FE106C661 /* Pods */ = {
@@ -236,9 +286,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D334D6629CDCD6900F1D540 /* ColorPickerViewController.xib in Resources */,
 				8D1A4B562955FB8000825E60 /* LaunchScreen.storyboard in Resources */,
 				8D1A4B532955FB8000825E60 /* Assets.xcassets in Resources */,
 				480D65C8296EEB6A003106FD /* ImageTableViewCell.xib in Resources */,
+				8D334D6929CDCDCC00F1D540 /* ColorSettingsViewController.xib in Resources */,
+				8D334D7029CDD18100F1D540 /* WelcomeColorsViewController.xib in Resources */,
 				8D1A4B5E2955FC0000825E60 /* README.md in Resources */,
 				8D1A4B512955FB7F00825E60 /* Main.storyboard in Resources */,
 			);
@@ -300,8 +353,11 @@
 				486374CF2969D16D0023D59C /* EpisodeViewController.swift in Sources */,
 				48BAA726298A826B00DA0A80 /* PodcastComposer.swift in Sources */,
 				8D1A4B4E2955FB7F00825E60 /* GenresViewController .swift in Sources */,
+				8D334D6329CDCD2200F1D540 /* ColorSettingsViewController.swift in Sources */,
 				48B0A272299C1899009551E5 /* GenreComposer.swift in Sources */,
+				8D334D6F29CDD18100F1D540 /* WelcomeColorsViewController.swift in Sources */,
 				8D1A4B4A2955FB7F00825E60 /* AppDelegate.swift in Sources */,
+				8D334D6129CDCD0700F1D540 /* ColorPickerViewController.swift in Sources */,
 				48B1C274296350DF0025639E /* Podcast.swift in Sources */,
 				485B05B02976C63B00E2D55C /* UImageView+Extensions.swift in Sources */,
 				8D1A4B4C2955FB7F00825E60 /* SceneDelegate.swift in Sources */,
