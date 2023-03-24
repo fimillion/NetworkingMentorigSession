@@ -11,7 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = makeColorsFlow()
+        window.rootViewController = makeStudentsFlow()
         self.window = window
         window.makeKeyAndVisible()
     }
@@ -31,6 +31,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func makeColorsFlow() -> UIViewController {
-        return UINavigationController(rootViewController: WelcomeColorsViewController())
+        return UINavigationController(rootViewController: ColorSettingsViewController())
+    }
+    
+    private func makeStudentsFlow() -> UIViewController {
+        return UINavigationController(rootViewController: WelcomeViewController())
     }
 }
