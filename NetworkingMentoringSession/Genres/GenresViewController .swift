@@ -1,22 +1,14 @@
 import UIKit
 
 final class GenresViewController: UITableViewController {
-    var presenter: GenresPresenter!
     var genres: [Genre] = []
+    var presenter: GenresPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.view = self
-        self.navigationItem.title = "Genre"
-        tableView.refreshControl = UIRefreshControl()
-        tableView.refreshControl?.addTarget(self, action: #selector(onRefresh), for: .valueChanged)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
-        onRefresh()
-    }
-    
-    @objc
-    func onRefresh() {
-        presenter.getGenres()
+        presenter.onRefresh()
+        title = "Genre"
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -27,34 +19,23 @@ final class GenresViewController: UITableViewController {
         return genres.count
     }
     
-    // MARK: - The visual representation of a single row in a table view.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: UITableViewCell.self))!
         let genre = genres[indexPath.row]
         cell.textLabel?.text = genre.name
         return cell
     }
     
-    // MARK: - Navigation to Podcast
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let genre = genres[indexPath.row]
-        let podcastVC = PodcastComposer.build(genreId: genre.id)
-        self.navigationController?.pushViewController(podcastVC, animated: true)
+        presenter.onSelectGanre(genre)
     }
 }
 
 extension GenresViewController: GenresView {
     
-    func display(_ genres: [Genre]) {
-        self.genres = genres
+    func display(_ genre: [Genre]) {
+        genres = genre
         tableView.reloadData()
-    }
-    
-    func display(isLoding: Bool) {
-        if isLoding {
-            tableView.refreshControl?.beginRefreshing()
-        } else {
-            tableView.refreshControl?.endRefreshing()
-        }
     }
 }

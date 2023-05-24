@@ -1,8 +1,8 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-    
     var window: UIWindow?
+    var appRouter: AppRouter?
     
     func scene(
         _ scene: UIScene,
@@ -10,11 +10,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options connectionOptions: UIScene.ConnectionOptions
     ) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        
         let window = UIWindow(windowScene: windowScene)
-        let genreNavigation = UINavigationController(rootViewController: GenreComposer.build())
-        window.rootViewController = genreNavigation
-        self.window = window
+        let navigation = UINavigationController()
+        let appRouter = AppRouter(navigationController: navigation)
+        appRouter.start()
+        self.appRouter = appRouter
+        window.rootViewController = navigation
         window.makeKeyAndVisible()
+        
+        self.window = window
+        
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {}

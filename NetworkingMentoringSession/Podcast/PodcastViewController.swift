@@ -6,19 +6,11 @@ final class PodcastViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.view = self
-        self.navigationItem.title = "Podcast"
+        presenter.onRefresh()
+        title = "Podcast"
         let customCellNib = UINib(nibName: "ImageTableViewCell", bundle: nil)
         tableView.register(customCellNib, forCellReuseIdentifier: "ImageTableViewCell")
-        tableView.refreshControl = UIRefreshControl()
-        tableView.refreshControl?.addTarget(self, action: #selector(onRefresh), for: .valueChanged)
-        tableView.rowHeight = UITableView.automaticDimension
-        onRefresh()
-    }
-    
-    @objc
-    func onRefresh() {
-        presenter.getPodcasts()
+        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,8 +31,7 @@ final class PodcastViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let podcast = podcasts[indexPath.row]
-        let episodeVC = EpisodeComposer.build(podcastId: podcast.id)
-        self.navigationController?.pushViewController(episodeVC, animated: true)
+        presenter.onSelectPodcast(podcast)
     }
 }
 

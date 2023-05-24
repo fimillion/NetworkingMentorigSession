@@ -2,43 +2,43 @@ import Foundation
 
 protocol PodcastView: AnyObject {
     func display(_ podcasts: [Podcast])
-    func display(isLoding: Bool)
 }
 
 final class PodcastPresenter {
     weak  var view: PodcastView?
-    var genreId: Int
+    weak var router: PodcastRouter?
+    private var genreID: Int
     
-    init(genreId: Int) {
-        self.genreId = genreId
+    init(genreID: Int, view: PodcastView?) {
+        self.view = view
+        self.genreID = genreID
     }
     
-    func getPodcasts() {
-        view?.display(isLoding: true)
-        var components = URLComponents()
-        components.scheme = "https"
-        components.host = "listen-api-test.listennotes.com"
-        components.path = "/api/v2/best_podcasts"
+    func onRefresh() {
+        var components = URLComponents(string: "https://listen-api-test.listennotes.com/api/v2/best_podcasts")!
         components.queryItems = [
-            URLQueryItem(name: "genre_id", value: String(genreId))
+            URLQueryItem(name: "genre_id", value: String(genreID))
         ]
+                         
         let request = URLRequest(url: components.url!)
         let session = URLSession(configuration: .default)
-        let task = session.dataTask(with: request) { data, _, _ in
+        let task = session.dataTask(with: request) { data, _, error in
             guard let data = data else { return }
             do {
                 let result = try JSONDecoder().decode(PodcastResult.self, from: data)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                DispatchQueue.main.async {
                     self.view?.display(result.podcasts)
-                    self.view?.display(isLoding: false)
-                })
+                }
             } catch {
                 DispatchQueue.main.async {
-                    print("PARSING_ERROR \(error)")
-                    self.view?.display(isLoding: false)
+                    print(error)
                 }
             }
         }
         task.resume()
+    }
+    
+    func onSelectPodcast(_ podcast: Podcast) {
+        router?.route(with: podcast)
     }
 }

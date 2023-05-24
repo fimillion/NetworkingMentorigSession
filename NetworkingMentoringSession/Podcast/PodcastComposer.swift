@@ -2,13 +2,11 @@ import UIKit
 
 final class PodcastComposer {
     
-    static func build (genreId: Int) -> UIViewController {
-        let presenter = PodcastPresenter(genreId: genreId)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let storyboardID = String(describing: PodcastViewController.self)
-        let controller = storyboard.instantiateViewController(withIdentifier: storyboardID) as! PodcastViewController
-        controller.presenter = presenter
-        presenter.view = controller
-        return controller
+    static func build (with genreID: Int, router: PodcastRouter) -> UIViewController {
+        let viewController = PodcastViewController()
+        let presenter = PodcastPresenter(genreID: genreID, view: viewController)
+        viewController.presenter = presenter
+        presenter.router = router
+        return viewController
     }
 }

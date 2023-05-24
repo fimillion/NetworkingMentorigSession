@@ -6,17 +6,11 @@ final class EpisodeViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Episode"
+        presenter.onRefresh()
+        title = "Episode"
         let customCellNib = UINib(nibName: "ImageTableViewCell", bundle: nil)
         tableView.register(customCellNib, forCellReuseIdentifier: "ImageTableViewCell")
-        tableView.refreshControl = UIRefreshControl()
-        tableView.refreshControl?.addTarget(self, action: #selector(onRefresh), for: .valueChanged)
-        onRefresh()
-    }
-    
-    @objc
-    func onRefresh() {
-        presenter.getEpisods()
+        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -40,13 +34,5 @@ extension EpisodeViewController: EpisodeView {
     func display(_ episode: [Episode]) {
         episodes = episode
         tableView.reloadData()
-    }
-    
-    func display(isLoding: Bool) {
-        if isLoding {
-            tableView.refreshControl?.beginRefreshing()
-        } else {
-            tableView.refreshControl?.endRefreshing()
-        }
     }
 }
